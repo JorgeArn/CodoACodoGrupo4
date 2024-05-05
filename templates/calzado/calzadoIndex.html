@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- css index -->
+    <link rel="stylesheet" href="../../static/css/index.css">
+    <!-- css registro -->
+    <link rel="stylesheet" href="../../static/css/registro.css">
+    <!-- Google Fonts Iconos -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- Buscador -->
+    <div class="container-fluid buscador d-flex justify-content-center">
+        <form action="buscar.html" method="get">
+            <input id="texto-buscador" type="text" placeholder="Buscar...">
+            <input type="submit" id="submit-btn" style="display: none;">
+            <span class="material-symbols-outlined" id="icono-submit">
+                search</span>
+        </form>
+    </div>
+
+    <!-- header menú -->
+    <div class="container-fluid fondo p-0">
+        <header class="container-fluid p-0">
+            <nav class="container-fluid navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container-fluid menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-4" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            
+                        <a id="menu" class="nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../abrigos/abrigosIndex.html">Abrigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link"
+                                href="../accesorios/accesoriosIndex.html">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            Calzado
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link"
+                                href="../pantalones/pantalonesIndex.html">Pantalones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../remeras/remerasIndex.html">Remeras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../vestidos/vestidosIndex.html">Vestidos</a>
+                        </li>
+                    </ul>
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto align-items-center">
+                            <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Registro</a>
+                            <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
+                                data-bs-target="#inicioSesion">Iniciar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="formRegister" method="GET" novalidate>
+                        <div class="form-control">
+                            <label>Nombre</label>
+                            <input type="text" required name="firstname" id="firstname">
+                        </div>
+                        <div class="error" id="error-firstname"></div>
+                        <div class="form-control">
+                            <label>Apellido</label>
+                            <input type="text" required name="lastname" id="lastname">
+                        </div>
+                        <div class="error" id="error-lastname"></div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" required name="email" id="email">
+                        </div>
+                        <div class="error" id="error-email"></div>
+                        <div class="form-control">
+                            <label>Contraseña</label>
+                            <input type="password" required name="password" id="password">
+                        </div>
+                        <div class="error" id="error-password"></div>
+                        <div class="form-control">
+                            <label id="label-birthdate">Fecha de Nacimiento</label>
+                            <input type="date" required name="birthdate" id="birthdate">
+                        </div>
+                        <div class="form-control">
+                            <select name="country" id="country" class="form-select">
+                                <option value="">País</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Perú</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                        <div class="form-terms">
+                            <div class="terms">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Acepto términos y condiciones</label>
+                            </div>
+                        </div>
+                        <button type="submit" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Registrarse</button>
+                        <div class="form-help">
+                            <a href="#">Necesitas ayuda?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal Inicio Sesión -->
+    <div class="modal fade" id="inicioSesion" tabindex="-1" aria-labelledby="inicioSesionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="inicioSesionLabel">Iniciar Sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                        </div>
+                        <button type="submit" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="fondo">
+        <div id="calzado" style="padding: 6rem;">
+            <div class="cards">
+                <div class="card" style="width: 18rem;">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvx9qDAcxQyp2OYDEJxbnxvR1h8pKOm1WNGQ&s">
+                    <div class="card-body">
+                        <h5 class="card-title">Calzado Martin</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="calzado1.html"class="btn btn-primary">Ver mas</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img
+                        src="data:image/jpeg;base64,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">
+                    <div class="card-body">
+                        <h5 class="card-title">Calzado Gabriel</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="calzado2.html" class="btn btn-primary">Ver mas</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2LyZpq9glBERe_Wz6u5kldIaf1ap8Q0ntsg&s">
+                    <div class="card-body">
+                        <h5 class="card-title">Calzado Rodrigo</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="calzado3.html" class="btn btn-primary">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="container-fluid" id="footer">
+        <div>
+            <a href="../extras/terminosyCondiciones.html">Términos y condiciones</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Preguntas Frecuentes</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Ayuda</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="../../static/img/facebook.jpg" alt="Facebook" width="32" height="32">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="../../static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32" height="32">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="../../static/img/instagram.jpg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" aria-label="Instagram">
+                <img src="../../static/img/whatsapp2.png" alt="Instagram" width="32" height="32">
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <body>
+
+    </body>
+
+</html>

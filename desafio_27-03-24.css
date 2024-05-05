@@ -1,0 +1,136 @@
+.buscador {
+    background-color: blueviolet;
+}
+
+#texto-buscador {
+    width: 25vw; 
+    border-radius: 15px;
+}
+
+.buscador form {
+    position: relative;
+    padding: 0.5rem 0.5rem;
+}
+
+#icono-submit {
+    position: absolute;
+    left: 90%;
+    top: 0.6rem;
+    cursor: pointer;
+}
+
+
+#navbarText li {
+    margin-right: 3rem;
+}
+
+#navbarText a {
+    font-size: 1.3rem;
+}
+
+.formularios:hover {
+    filter: opacity(0.5);
+    
+}
+
+
+.formularios {
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+    margin-right: 3rem;
+} 
+
+#menu {
+    position: relative;
+}
+
+#menu:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #f987f3;
+    filter: drop-shadow(1px 3px 5px rgba(254, 64, 247, 0.841));
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+#menu:hover:after {
+    width: 100%;
+    right: 0;  
+}
+
+/* .header {
+    background-color: #659474;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: sticky;
+    z-index: 2;
+    top: 0px;
+    background-color: #659474;
+    padding: 1rem;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0rem;
+
+}
+
+.menu a {
+    background-color: rgb(129, 202, 142);
+    padding: .5rem 2rem;
+    text-decoration: none;
+    color: black;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: rgb(102, 140, 123);
+} */
+
+.cards {
+    display: flex;
+}
+.card{
+    margin: 5rem;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.texto {
+    text-align: justify;
+    padding: 1rem;
+   /* margin: 1rem 3rem;*/
+    background-color: rgb(155, 183, 143);
+}
+
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#vestidos h2 {
+    color: green;
+}
+.card-body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}

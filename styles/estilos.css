@@ -1,0 +1,24 @@
+
+/*registro*/
+.modal-body{
+    background-image: url('../imagen/descarga.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*cambia letra*/
+}
+.modal-header{
+    background-image: url('../imagen/images.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #abe4b6;/*cambia color header*/
+
+}
+#custom-footer {
+    background-image: url('../imagen/images.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #d7dc8d; /*cambia color footer*/
+    color: #c2d3c5;
+}
