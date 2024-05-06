@@ -7,13 +7,15 @@
     --bg-input-color:#4f31572c;
 }
 
+/* ESTO LO COMENTÉ PORQUE GENERA UNA BARRA DE SCROLL LATERAL
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-}
+} */
 
+/* ESTO LO COMENTÉ PARA QUE NO HAYA CONFLICTO CON EL BODY DE INDEX.
 body {
     background: #2a2a2a;
 }
@@ -29,9 +31,10 @@ body::before {
     background: url("../img/bg-register.jpg");
     background-position: center;
     background-size: cover;
-}
+} */
+
 nav {
-    position: fixed;
+    /* position: fixed; */
     padding: 25px 60px;
     z-index: 1;
     color: #fff;
