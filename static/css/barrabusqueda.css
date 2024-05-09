@@ -1,0 +1,28 @@
+/* barra de busqueda */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.buscador {
+    background-color: rgb(75, 75, 75);
+}
+
+#texto-buscador {
+    width: 25vw;
+    border-radius: 15px;
+}
+
+.buscador form {
+    position: relative;
+    padding: 0.5rem 0.5rem;
+}
+
+#icono-submit {
+    position: absolute;
+    left: 90%;
+    top: 0.6rem;
+    cursor: pointer;
+}
+

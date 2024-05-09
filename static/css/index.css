@@ -1,3 +1,18 @@
+@import url("carrusel.css") ;
+@import url("barrabusqueda.css") ;
+@import url("barranavegacion.css") ;
+@import url("cards.css") ;
+@import url("footer.css");
+@import url("modal.css");
+:root{
+    --bg-color:#181419;
+    --primary-color:#d452f5;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: url(../img/hannah-morgan-ycVFts5Ma4s-unsplash-scaled-e1603910735997.jpg);
@@ -20,181 +35,10 @@ body {
 
 
 
-/* barra de busqueda */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.buscador {
-    background-color: rgb(75, 75, 75);
-}
-
-#texto-buscador {
-    width: 25vw;
-    border-radius: 15px;
-}
-
-.buscador form {
-    position: relative;
-    padding: 0.5rem 0.5rem;
-}
-
-#icono-submit {
-    position: absolute;
-    left: 90%;
-    top: 0.6rem;
-    cursor: pointer;
-}
 
 
 
-/* Barra de navegación */
-#navbarText li {
-    margin-right: 3rem;
-}
-
-#navbarText a {
-    font-size: 1.3rem;
-    color: white;
-    text-shadow: 1px  0px 0px black,
-               0px  1px 0px black,
-              -1px  0px 0px black,
-               0px -1px 0px black;
-}
-
-.formularios:hover {
-    filter: opacity(0.5);
-    
-}
-
-.formularios {
-    text-decoration: none;
-    color: white;
-    transition: 0.8s;
-    margin-right: 3rem;
-} 
-
-#menu {
-    position: relative;
-}
-
-.menu {
-    backdrop-filter: blur(10px);
-}
-
-#menu:after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: #cc85fb;
-    filter: drop-shadow(1px 3px 5px rgba(216, 64, 254, 0.841));
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transition: all .5s;
-    will-change: width;
-}
-
-#menu:hover:after {
-    width: 100%;
-    right: 0;  
-}
 
 
 
-/* banner carousel */
-.banner {
-    height: 90vh;
-}
 
-#descuentos-titulo {
-    color: white;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 2.3rem;
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-.carousel-item img {
-    max-width: 30%;
-    height: auto;
-    margin: 0 auto; /* Esto centra horizontalmente la imagen */
-    display: block; /* Esto asegura que la imagen se muestre como un bloque */
-}
- 
-/*cards*/
-.cards {
-    display: flex;
-}
-.card{
-    transition: 0.10s;
-    margin: 5rem;
-}
-
-.card:hover{
-    
-    transform: scale(1.1);
-}
-.one:hover{
-    transform: none;
-}
-
-/*items*/
-.grid-item{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
-    /* grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto; */
-    justify-items: center;
-    row-gap: 20px;
-}
-
-#footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(218, 180, 226);
-    display: flex;
-    height: 100px;
-    width: 100%;
-    height: 50px; /* Establece una altura fija para el pie de página */
-    padding: 10px;
-    text-align: center;
-}
-
-#footer a {
-    
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    font-size: 14px;
-    font-style: initial;
-    padding-left: 30px;
-    text-decoration: overline;
-    color: inherit;
-    text-decoration: none;
-    padding: 10px;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-    color: var(--secondary-color);
-}
-.social-media {
-    
-    display: flex;
-    justify-content: center; /* Centra las imágenes de redes sociales */
-    gap: 15px; /* Espaciado entre imágenes */
-}
-
-.social-media img {
-    
-    transition: transform 0.3s; /* Efecto de transición para hover */
-
-}
-
-.social-media img:hover {
-    
-    transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
-}
