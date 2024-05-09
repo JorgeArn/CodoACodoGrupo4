@@ -1,11 +1,4 @@
-:root{
-    --bg-color:#181419;
-    --primary-color:#d452f5;
-    --secondary-color:#ffc098;
-    --third-color:#db4648;
-    --third-bis-color:#db4648f2;
-    --bg-input-color:#4f31572c;
-}
+
 
 /* ESTO LO COMENTÉ PORQUE GENERA UNA BARRA DE SCROLL LATERAL
 * {
@@ -33,22 +26,7 @@ body::before {
     background-size: cover;
 } */
 
-nav {
-    /* position: fixed; */
-    padding: 25px 60px;
-    z-index: 1;
-    color: #fff;
-    display: flex;
-    width: 100%;
-    font-size: 1.5em;
-    font-weight: bold;
 
-}
-
-
-nav a img {
-    width: 167px;
-}
 
 .logo a{
     text-decoration: none;
@@ -215,13 +193,7 @@ form .form-terms :where(label, a) {
         display: none;
     }
 
-    nav {
-        font-size: 1em;
-        justify-content: center;
-    }
-    nav, .form-wrapper {
-        padding: 20px;
-    }
+   
 
     .form-wrapper {
         padding: 20px 70px;
@@ -232,10 +204,7 @@ form .form-terms :where(label, a) {
         margin: 25px 0 65px;
     }
 
-    nav a img {
-        width: 140px;
-    }
-
+   
     .form-wrapper {
         width: 100%;
         top: 50%;
