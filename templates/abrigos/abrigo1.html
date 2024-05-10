@@ -34,197 +34,198 @@
     </div>
 
     <!-- header menú -->
-    <div class="container-fluid fondo p-0">
-        <header class="container-fluid p-0">
-            <nav class="container-fluid navbar navbar-expand-lg navbar-dark p-0">
-                <div class="container-fluid menu">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse p-4" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-                            <li class="nav-item">
-                                
+
+    <header>
+        <nav class="container-fluid navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container-fluid menu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-4" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+
                             <a id="menu" class="nav-link" href="../../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link" href="abrigosIndex.html">Abrigos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link"
-                                    href="../accesorios/accesoriosIndex.html">Accesorios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link" href="../calzado/calzadoIndex.html">Calzado</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link"
-                                    href="../pantalones/pantalonesIndex.html">Pantalones</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link" href="../remeras/remerasIndex.html">Remeras</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="menu" class="nav-link" href="../vestidos/vestidosIndex.html">Vestidos</a>
-                            </li>
-                        </ul>
-                        <div id="navbarNavAltMarkup">
-                            <div class="navbar-nav ms-auto align-items-center">
-                                <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">Registro</a>
-                                <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#inicioSesion">Iniciar Sesión</a>
-                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="abrigosIndex.html">Abrigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../accesorios/accesoriosIndex.html">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../calzado/calzadoIndex.html">Calzado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../pantalones/pantalonesIndex.html">Pantalones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../remeras/remerasIndex.html">Remeras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="menu" class="nav-link" href="../vestidos/vestidosIndex.html">Vestidos</a>
+                        </li>
+                    </ul>
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto align-items-center">
+                            <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Registro</a>
+                            <a id="menu" class="formularios" type="button" data-bs-toggle="modal"
+                                data-bs-target="#inicioSesion">Iniciar Sesión</a>
                         </div>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Modal Registro -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="#" id="formRegister" method="GET" novalidate>
-                            <div class="form-control">
-                                <label>Nombre</label>
-                                <input type="text" required name="firstname" id="firstname">
+    <!-- Modal Registro -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="formRegister" method="GET" novalidate>
+                        <div class="form-control">
+                            <label>Nombre</label>
+                            <input type="text" required name="firstname" id="firstname">
+                        </div>
+                        <div class="error" id="error-firstname"></div>
+                        <div class="form-control">
+                            <label>Apellido</label>
+                            <input type="text" required name="lastname" id="lastname">
+                        </div>
+                        <div class="error" id="error-lastname"></div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" required name="email" id="email">
+                        </div>
+                        <div class="error" id="error-email"></div>
+                        <div class="form-control">
+                            <label>Contraseña</label>
+                            <input type="password" required name="password" id="password">
+                        </div>
+                        <div class="error" id="error-password"></div>
+                        <div class="form-control">
+                            <label id="label-birthdate">Fecha de Nacimiento</label>
+                            <input type="date" required name="birthdate" id="birthdate">
+                        </div>
+                        <div class="form-control">
+                            <select name="country" id="country" class="form-select">
+                                <option value="">País</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Perú</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                        <div class="form-terms">
+                            <div class="terms">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Acepto términos y condiciones</label>
                             </div>
-                            <div class="error" id="error-firstname"></div>
-                            <div class="form-control">
-                                <label>Apellido</label>
-                                <input type="text" required name="lastname" id="lastname">
-                            </div>
-                            <div class="error" id="error-lastname"></div>
-                            <div class="form-control">
-                                <label>Email</label>
-                                <input type="email" required name="email" id="email">
-                            </div>
-                            <div class="error" id="error-email"></div>
-                            <div class="form-control">
-                                <label>Contraseña</label>
-                                <input type="password" required name="password" id="password">
-                            </div>
-                            <div class="error" id="error-password"></div>
-                            <div class="form-control">
-                                <label id="label-birthdate">Fecha de Nacimiento</label>
-                                <input type="date" required name="birthdate" id="birthdate">
-                            </div>
-                            <div class="form-control">
-                                <select name="country" id="country" class="form-select">
-                                    <option value="">País</option>
-                                    <option value="AR">Argentina</option>
-                                    <option value="BO">Bolivia</option>
-                                    <option value="BR">Brasil</option>
-                                    <option value="CH">Chile</option>
-                                    <option value="CO">Colombia</option>
-                                    <option value="EC">Ecuador</option>
-                                    <option value="PY">Paraguay</option>
-                                    <option value="PE">Perú</option>
-                                    <option value="UY">Uruguay</option>
-                                    <option value="VE">Venezuela</option>
-                                </select>
-                            </div>
-                            <div class="form-terms">
-                                <div class="terms">
-                                    <input type="checkbox" id="terms">
-                                    <label for="terms">Acepto términos y condiciones</label>
-                                </div>
-                            </div>
-                            <button type="submit" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Registrarse</button>
-                            <div class="form-help">
-                                <a href="#">Necesitas ayuda?</a>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <button type="submit"
+                            onclick="alert('Opción no disponible, estamos trabajando en ello.')">Registrarse</button>
+                        <div class="form-help">
+                            <a href="#">Necesitas ayuda?</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-
-        <!-- modal Inicio Sesión -->
-        <div class="modal fade" id="inicioSesion" tabindex="-1" aria-labelledby="inicioSesionLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="inicioSesionLabel">Iniciar Sesión</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                            </div>
-                            <button type="submit" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Iniciar Sesión</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- item -->
-        <section class="d-flex justify-content-center">
-            <div class="card one" style="width: 18rem;">
-                <img src="https://static.wixstatic.com/media/6a192e_b8f551acc1494e518b1942246fb535a0~mv2.jpg/v1/fill/w_980,h_1447,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6a192e_b8f551acc1494e518b1942246fb535a0~mv2.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Campera Angus</h5>
-                    <p class="card-text"></p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Ecocuero de alta densidad</li>
-                    <li class="list-group-item">Variedad de talles</li>
-                    <li class="list-group-item"><b>$150.000</b></li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Comprar</a>
-                    <a href="#" class="card-link" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Agregar al carrito</a>
-                </div>
-            </div>
-
-
-        </section>
-
-        <!-- Footer -->
-        <footer class="container-fluid" id="footer">
-            <div>
-                <a href="../extras/terminosyCondiciones.html">Términos y condiciones</a>
-                <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Preguntas Frecuentes</a>
-                <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Ayuda</a>
-            </div>
-            <div class="social-media">
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                    <img src="../../static/img/facebook.jpg" alt="Facebook" width="32" height="32">
-                </a>
-                <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
-                    <img src="../../static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32" height="32">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                    <img src="../../static/img/instagram.jpg" alt="Instagram" width="32" height="32">
-                </a>
-                <a href="https://web.whatsapp.com/" target="_blank" aria-label="Instagram">
-                    <img src="../../static/img/whatsapp2.png" alt="Instagram" width="32" height="32">
-                </a>
-            </div>
-
-        </footer>
-
     </div>
+
+    <!-- modal Inicio Sesión -->
+    <div class="modal fade" id="inicioSesion" tabindex="-1" aria-labelledby="inicioSesionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="inicioSesionLabel">Iniciar Sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                        </div>
+                        <button type="submit"
+                            onclick="alert('Opción no disponible, estamos trabajando en ello.')">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- item -->
+    <section class="d-flex justify-content-center">
+        <div class="card one" style="width: 18rem;">
+            <img src="https://static.wixstatic.com/media/6a192e_b8f551acc1494e518b1942246fb535a0~mv2.jpg/v1/fill/w_980,h_1447,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6a192e_b8f551acc1494e518b1942246fb535a0~mv2.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Campera Angus</h5>
+                <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Ecocuero de alta densidad</li>
+                <li class="list-group-item">Variedad de talles</li>
+                <li class="list-group-item"><b>$150.000</b></li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link"
+                    onclick="alert('Opción no disponible, estamos trabajando en ello.')">Comprar</a>
+                <a href="#" class="card-link"
+                    onclick="alert('Opción no disponible, estamos trabajando en ello.')">Agregar al carrito</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid" id="footer">
+        <div>
+            <a href="../extras/terminosyCondiciones.html">Términos y condiciones</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Preguntas Frecuentes</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Ayuda</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="../../static/img/facebook.jpg" alt="Facebook" width="32" height="32">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="../../static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32"
+                    height="32">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="../../static/img/instagram.jpg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" aria-label="Instagram">
+                <img src="../../static/img/whatsapp2.png" alt="Instagram" width="32" height="32">
+            </a>
+        </div>
+
+    </footer>
 
 
     <!-- script Bootstrap -->
