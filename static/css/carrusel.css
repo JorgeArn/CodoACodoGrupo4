@@ -3,18 +3,105 @@
     height: 90vh;
 }
 
-#descuentos-titulo {
-    color: white;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 2.3rem;
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-.carousel-item img {
+/* .carousel-item img {
     max-width: 30%;
     height: auto;
-    margin: 0 auto; /* Esto centra horizontalmente la imagen */
-    display: block; /* Esto asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Esto centra horizontalmente la imagen 
+    display: block; /* Esto asegura que la imagen se muestre como un bloque 
+} */
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    filter: brightness(95%);
 }
- 
+
+.title-banner {
+    color: #801593;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: -.025em;
+    line-height: 3.3rem;
+}
+
+.subtitle-banner {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+
+.carousel-caption {
+    right: 0 !important;
+    bottom: 1.25rem;
+    left: 15% !important;
+    text-align: left !important;
+    top: 8rem !important;
+    width: 60%;
+}
+
+
+/* BOTON COMPRAR */
+.btn-main{
+    border: 2px solid #fff !important;
+    color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.btn-main:hover {
+    background-color: #6b1778;
+    background: linear-gradient(to right, #6b1778 0%, #b721d8 0%, #460250 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    .title-banner {
+        font-size: 2.5rem;
+    }
+
+    .subtitle-banner {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption {
+        top: 4rem !important;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title-banner {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .subtitle-banner {
+        font-size: 1.2rem;
+        line-height: 2rem;
+
+    }
+
+    .carousel-caption {
+        top: 2rem !important;
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .title-banner {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .subtitle-banner {
+        font-size: 1rem;
+        line-height: 1.2rem;
+
+    }
+    .carousel-caption {
+        top: 0 !important;
+
+
+    }
+}

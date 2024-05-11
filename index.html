@@ -180,9 +180,9 @@
 
     <!-- carrousel -->
     <section>
-        <div class="container">
-            <h2 id="descuentos-titulo"> HASTA 40% OFF EN PRODUCTOS SELECCIONADOS</h2>
-            <div id="carouselExampleCaptions" class="carousel slide">
+        <div>
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -199,46 +199,67 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="templates/accesorios/accesorio3.html">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLlJtZraBdNn4gpH6qO58QXe1GyTyubEzRA&s"
-                                class="d-block w-100" alt="Imagen del Gorro Moe">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Gorro Moe</h5>
-                            <h5>35% OFF</h5>
+
+                        <img src="static/img/banner1.png" class="d-block w-100" alt="banner descuentos">
+
+
+                        <div class="carousel-caption  d-md-block">
+                            <h1 class="title-banner">SÓLO POR HOY</h1>
+                            <h2 class="subtitle-banner">HASTA 40% OFF EN PRODUCTOS SELECCIONADOS</h2>
+                            <button class="btn btn-main">Comprar ahora</button>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <a href="templates/abrigos/abrigo2.html">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHiArbXlqmvV2nBk8LKUD8VixYfceJVLK5UA&s"
-                                class="d-block w-100" alt="campera de moda">
+                        <a href="templates/vestidos/vestido1.html">
+                            <img src="static/img/banner2.png" class="d-block w-100"
+                                alt="Imagen de dos chicas con vestidos">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en vestidos</h1>
+                                <h2 class="subtitle-banner">Vestidos Maggie</h2>
+                                <h3>40% OFF</h3>
+                            </div>
                         </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Campera Charlie</h5>
-                            <h5>40% OFF</h5>
-                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="templates/abrigos/abrigo2.html">
+                            <img src="static/img/banner3.png" class="d-block w-100" alt="campera de moda">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en camperas</h1>
+                                <h2 class="subtitle-banner">Campera Charlie</h2>
+                                <h3>40% OFF</h3>
+                            </div>
+                        </a>
+
                     </div>
                     <div class="carousel-item">
                         <a href="templates/pantalones/pantalon3.html">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvBtSuQZqOx6VRqHTtiT6H4nltG4TThHHdw&s"
-                                class="d-block w-100" alt="pantalon de moda">
+                            <img src="static/img/banner4.png" class="d-block w-100" alt="pantalon de moda">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en pantalones</h1>
+                                <h2 class="subtitle-banner">Pantalon Nina</h2>
+                                <h3>20% OFF</h3>
+                            </div>
                         </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Pantalon Nina</h5>
-                            <h5>20% OFF</h5>
-                        </div>
+
                     </div>
                     <div class="carousel-item">
                         <a href="templates/calzado/calzado1.html">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvx9qDAcxQyp2OYDEJxbnxvR1h8pKOm1WNGQ&s"
-                                class="d-block w-100" alt="pantalon de moda">
+                            <img src="static/img/banner5.png" class="d-block w-100" alt="pantalon de moda">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en calzado</h1>
+                                <h2 class="subtitle-banner">Calzado Martin</h2>
+                                <h3>10% OFF</h3>
+                            </div>
                         </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Calzado Martin</h5>
-                            <h5>10% OFF</h5>
-                        </div>
+
                     </div>
-                    <div class="carousel-item">
+                    <!--     <div class="carousel-item">
                         <a href="templates/remeras/remera2.html">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIx3mxr16ycW_WRJMcz-R22OuqaTSmnwxjGA&s"
                                 class="d-block w-100" alt="pantalon de moda">
@@ -247,17 +268,8 @@
                             <h5>Remera Lola</h5>
                             <h5>35% OFF</h5>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="templates/vestidos/vestido1.html">
-                            <img src="data:image/jpeg;base64,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"
-                                class="d-block w-100" alt="pantalon de moda">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Vestido Maggie</h5>
-                            <h5>40% OFF</h5>
-                        </div>
-                    </div>
+                    </div> -->
+
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev">
@@ -271,31 +283,40 @@
                 </button>
             </div>
 
+
         </div>
 
+    </section>
 
 
+    <section class="mas-vendidos text-center pt-5">
+        <h1>Productos más vendidos</h1>
+
+    </section>
+
+    <section class="container-form text-center mt-5 mb-5 ms-1 me-1">
         <!-- Formulario Contacto -->
 
-        <div class="container-fluid" id="contacto">
-            <h2 style="color: beige; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                Contacto</h2>
-            <form>
-                <h5>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label" style="color: beige;">Tu email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Tu email">
-                        <div id="emailHelp" class="form-text"></div>
-                        <label for="exampleInputPassword1" class="form-label" style="color: beige;">Tu
-                            mensaje</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1"
-                            placeholder="Dejanos tu mensaje">
-                    </div>
+        <div class="container-fluid d-flex justify-content-center align-items-center" id="contacto">
 
-                    <button type="submit"
-                        onclick="alert('Opción no disponible, estamos trabajando en ello.')">Enviar</button>
-                </h5>
+            <form class="form-contacto">
+                <h2>Contacto</h2>
+
+                <div class="mb-3 text-start">
+                    <label for="exampleInputEmail1" class="form-label">Tu email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Tu email">
+                    <div id="emailHelp" class="form-text"></div>
+                    <label for="exampleInputPassword1" class="form-label">Tu
+                        mensaje</label>
+                    <textarea class="form-control" id="exampleInputPassword1" rows="5"
+                        placeholder="Dejanos tu mensaje"></textarea>
+
+                </div>
+
+                <button type="submit"
+                    onclick="alert('Opción no disponible, estamos trabajando en ello.')">Enviar</button>
+
             </form>
         </div>
     </section>
