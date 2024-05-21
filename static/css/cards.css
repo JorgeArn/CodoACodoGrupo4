@@ -1,10 +1,21 @@
 /*cards*/
-.cards {
+
+/* .cards {
     display: flex;
+} */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
+    /* grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto; */
+    justify-items: center;
+    row-gap: 20px;
 }
+
 .card{
     transition: 0.10s;
     margin: 5rem;
+    width: 18rem;
 }
 
 .card:hover{
@@ -13,14 +24,4 @@
 }
 .one:hover{
     transform: none;
-}
-
-/*items*/
-.grid-item{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
-    /* grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto; */
-    justify-items: center;
-    row-gap: 20px;
 }
