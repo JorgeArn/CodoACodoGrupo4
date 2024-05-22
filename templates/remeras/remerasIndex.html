@@ -10,8 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- css index -->
     <link rel="stylesheet" href="../../static/css/index.css">
-    <!-- css registro -->
-    <link rel="stylesheet" href="../../static/css/registro.css">
+
 
     <!-- Google Fonts Iconos -->
     <link rel="stylesheet"
@@ -20,14 +19,10 @@
 
 <body>
     <!-- Buscador -->
-    <div class="container-fluid buscador d-flex justify-content-center">
-        <form action="buscar.html" method="get">
-            <input id="texto-buscador" type="text" placeholder="Buscar...">
-            <input type="submit" id="submit-btn" style="display: none;">
-            <span class="material-symbols-outlined" id="icono-submit">
-                search</span>
-        </form>
-    </div>
+    <section id="search">
+        <input type="text" class="input-search  me-3" placeholder="Buscar...">
+        <button class="btnbuscador" type="submit">Buscar</button>
+    </section>
 
     <!-- header menú -->
     <header>
@@ -176,41 +171,41 @@
 
 
 
-    <section class="fondo">
-        <div id="remeras" style="padding: 6rem;">
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_WnTVXNnIadEz1ZpEB8Yg7zOGm_HJd1PYw&s"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Remera Juan</h5>
-                        <p class="card-text">
-                        </p>
-                        <a href="remera1.html" class="btn btn-primary">Ver mas</a>
-                    </div>
+    <section>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_WnTVXNnIadEz1ZpEB8Yg7zOGm_HJd1PYw&s"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Remera Juan</h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="remera1.html" class="btn btn-primary">Ver mas</a>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIx3mxr16ycW_WRJMcz-R22OuqaTSmnwxjGA&s"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Remera Lola</h5>
-                        <p class="card-text">
-                        </p>
-                        <a href="remera2.html" class="btn btn-primary">Ver mas</a>
-                    </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIx3mxr16ycW_WRJMcz-R22OuqaTSmnwxjGA&s"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Remera Lola</h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="remera2.html" class="btn btn-primary">Ver mas</a>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV35PUQpgP2WsEW1zjRV1OJqRyOuf9U2IoGw&s"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Remera Rosalía</h5>
-                        <p class="card-text">
-                        </p>
-                        <a href="remera3.html" class="btn btn-primary">Ver mas</a>
-                    </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV35PUQpgP2WsEW1zjRV1OJqRyOuf9U2IoGw&s"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Remera Rosalía</h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="remera3.html" class="btn btn-primary">Ver mas</a>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Footer -->

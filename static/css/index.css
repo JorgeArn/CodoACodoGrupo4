@@ -4,6 +4,8 @@
 @import url("cards.css");
 @import url("footer.css");
 @import url("modal.css");
+@import url("mas-vendidos.css");
+@import url("contacto.css");
 :root{
     --bg-color:#181419;
     --primary-color:#d452f5;
