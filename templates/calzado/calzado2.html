@@ -10,9 +10,6 @@
     <!-- css index -->
     <link rel="stylesheet" href="../../static/css/index.css">
 
-    <!-- css form registro modal -->
-    <link rel="stylesheet" href="../../static/css/registro.css">
-
     <!-- css Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -24,14 +21,10 @@
 
 <body>
     <!-- Buscador -->
-    <div class="container-fluid buscador d-flex justify-content-center p-0">
-        <form action="buscar.html" method="get">
-            <input id="texto-buscador" type="text" placeholder="Buscar...">
-            <input type="submit" id="submit-btn" style="display: none;">
-            <span class="material-symbols-outlined" id="icono-submit">
-                search</span>
-        </form>
-    </div>
+    <section id="search">
+        <input type="text" class="input-search  me-3" placeholder="¿Qué estas buscando?...">
+        <button class="btnbuscador" type="submit">Buscar</button>
+    </section>
 
     <!-- header menú -->
 
@@ -182,7 +175,7 @@
 
     <!-- item -->
     <section class="d-flex justify-content-center">
-        <div class="card one" style="width: 18rem;">
+        <div class="card one">
             <img src="data:image/jpeg;base64,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"
                 class="card-img-top" alt="...">
             <div class="card-body">
