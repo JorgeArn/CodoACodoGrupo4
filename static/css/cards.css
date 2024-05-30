@@ -1,8 +1,5 @@
 /*cards*/
 
-/* .cards {
-    display: flex;
-} */
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
