@@ -20,10 +20,10 @@
 
 <body>
     <!-- Buscador -->
-    <section id="search">
-        <input type="text" class="input-search  me-3" placeholder="Buscar...">
+    <form id="formulario" class="search">
+        <input type="text" id="inputBusqueda" name="busqueda" class="input-search  me-3" placeholder="Buscar...">
         <button class="btnbuscador" type="submit">Buscar</button>
-    </section>
+    </form>
 
     <!-- Header menú -->
     <header>
@@ -164,7 +164,7 @@
                         <div class="mb-3">
                             <label for="login-pass" class="form-label">Contraseña</label>
                             <input type="password" class="form-control" id="login-pass" disabled>
-                            
+
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -177,10 +177,16 @@
             </div>
         </div>
     </div>
-    <!-- item -->
-    <section class="d-flex justify-content-center min-vh-100">
+
+    <!-- item unitario-->
+    <section id="sectionABorrar" class="d-flex justify-content-center min-vh-100">
         <div class="card one">
         </div>
+    </section>
+
+    <!-- Cards desde la API que carga el buscador-->
+    <section>
+        <div class="cards"></div>
     </section>
 
     <!-- Footer -->
@@ -196,8 +202,7 @@
                 <img src="../static/img/facebook.jpg" alt="Facebook" width="32" height="32">
             </a>
             <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
-                <img src="../static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32"
-                    height="32">
+                <img src="../static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32" height="32">
             </a>
             <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                 <img src="../static/img/instagram.jpg" alt="Instagram" width="32" height="32">
@@ -206,17 +211,20 @@
                 <img src="../static/img/whatsapp2.png" alt="Instagram" width="32" height="32">
             </a>
         </div>
-
     </footer>
-    <script src="../static/js/index.js"></script>
-    <script src="../static/js/fortaleza.js"></script>
+
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
 
+    <!-- JS Inicio de sesion -->
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/fortaleza.js"></script>
+
     <!-- JS Fetch -->
     <script src="../static/js/articuloInfoFetch.js"></script>
+    <script src="../static/js/infoBusquedaFetch.js"></script>
 
 </body>
 
