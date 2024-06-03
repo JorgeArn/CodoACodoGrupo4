@@ -5,7 +5,7 @@ formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const terminoBusqueda = inputBusqueda.value;
-    const url = `https://api.mercadolibre.com/sites/MLA/search?q=${terminoBusqueda}&limit=3#json`;
+    const url = `https://api.mercadolibre.com/sites/MLA/search?q=${terminoBusqueda}&category=MLA1430&limit=3#json`;
 
     fetch(url)
         .then(respuesta => respuesta.json())
