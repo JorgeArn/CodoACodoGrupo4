@@ -13,6 +13,7 @@ formulario.addEventListener('submit', (event) => {
     const terminoBusqueda = inputBusqueda.value;
     const url = `https://api.mercadolibre.com/sites/MLA/search?q=${terminoBusqueda}&category=MLA1430&limit=3#json`;
 
+    // Petición a la API
     fetch(url)
         .then(respuesta => respuesta.json())
         .then(response => renderArticulos(response))
@@ -44,6 +45,8 @@ formulario.addEventListener('submit', (event) => {
                 `
             console.log(articulo);
         }
+
+        // Inserción en el HTML
         document.querySelector('.cards').innerHTML = card;
     }
 });
