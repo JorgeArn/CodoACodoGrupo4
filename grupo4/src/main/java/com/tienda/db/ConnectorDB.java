@@ -38,5 +38,24 @@ public class ConnectorDB {
         return st;
     }
 
+    public Statement conectarDB(){
+        // Conexión a la base de datos
+        try {
+            
+        Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda_de_ropa", "root", "");
+
+            // Creación de un statement para ejecutar consultas
+         Statement statement= connection.createStatement();
+
+         return statement;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
 
 }

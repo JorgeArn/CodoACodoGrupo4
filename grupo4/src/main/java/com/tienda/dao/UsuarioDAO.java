@@ -13,21 +13,6 @@ import com.tienda.db.ConnectorDB;
 
 public class UsuarioDAO {
 
-    public void listar(){
-        try {
-            Statement st= ConnectorDB.getSt(); // statement es el conector entre java y sql. que ya lo tengo en connectorDB
-            ResultSet rs= st.executeQuery("SELECT * FROM usuarios");// ejecucion de la consulta. en resulset tengo todos los artículos
-            while (rs.next()) {
-                System.out.println(rs.getString("nombre"));
-                System.out.println(rs.getString("apellido"));
-                System.out.println(rs.getString("email"));
-                System.out.println(rs.getString("admin"));
-            }
-            
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+   
 
 }
