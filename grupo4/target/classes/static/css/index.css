@@ -1,0 +1,26 @@
+@import url("carrusel.css");
+@import url("barrabusqueda.css");
+@import url("barranavegacion.css");
+@import url("cards.css");
+@import url("footer.css");
+@import url("modal.css");
+@import url("mas-vendidos.css");
+@import url("contacto.css");
+:root{
+    --bg-color:#181419;
+    --primary-color:#d452f5;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+}
+
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    background: url(../img/hannah-morgan-ycVFts5Ma4s-unsplash-scaled-e1603910735997.jpg);
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+    background-attachment: fixed;
+    background-size: cover;
+    /* position: absolute; */
+    
+}  

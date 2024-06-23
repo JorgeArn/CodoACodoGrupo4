@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --bg-body: #F6F9FF;
+    --bg-header: #c933c1fa;
+    --bg-footer: rgb(225, 221, 221);
+    --color-primary: #dd05cb;
+    --color-warning:#ba58d3;
+    --color-danger:#f55291;
+    --color-info:#52cff5;
+    --borde-color-primary:#b806a9;
+    --borde-color-warning:#b546d1;
+    --borde-color-info:#44a7c5;
+    --hover-color-primary:#c216b3;
+    --hover-color-warning:#983daf;
+    --hover-color-info:#3e95af;
+}
+
+body{
+    background-color: var(--bg-body);
+}
+
+header{
+    background-color: var(--bg-header);
+    height: 60px;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--bg-footer);
+    height: 80px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 140px);
+}
+
+.container-card{
+    padding: 10px;
+    width: 100%;
+}
+
+td{
+    vertical-align: middle;
+}
+
+.img-small{
+    width: 60px;
+    border-radius: 5px;
+}
+
+.container-card .card-header{
+background-color: #f5f5f5;
+display: flex;
+justify-content: space-between;
+}
+
+/* BOTONES */
+.btn-info{
+    background-color: var(--color-info);
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    border: 1px solid var(--borde-color-primary);
+}
+
+.btn-primary:hover{
+    background-color: var(--hover-color-primary);
+    border:1px solid var(--borde-color-primary);
+}
+
+.btn-warning{
+    background-color: var(--color-warning);
+    border:1px solid var(--borde-color-warning);
+}
+
+.btn-warning:hover{
+    background-color: var(--hover-color-warning);
+    border:1px solid var(--borde-color-warning);
+    color:#fff;
+}
+
+.btn-info:hover{
+    background-color: var(--hover-color-info);
+    border:1px solid var(--borde-color-info);
+    color:#fff;
+}
+
+.btn-danger{
+    background-color: var(--color-danger);
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.modal-content{
+    border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+label{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px){
+    .container-card{
+        padding: 60px 100px;
+    }
+    
+}

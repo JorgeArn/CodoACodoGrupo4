@@ -1,0 +1,53 @@
+/* Barra de navegación */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbarText li {
+    margin-right: 0.5rem;
+}
+
+#navbarText a {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px  0px 0px black,
+               0px  1px 0px black,
+              -1px  0px 0px black,
+               0px -1px 0px black;
+
+    position: relative;
+}
+
+#navbarText a:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #cc85fb;
+    filter: drop-shadow(1px 3px 5px rgba(216, 64, 254, 0.841));
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+#navbarText a:hover:after {
+    width: 100%;
+    right: 0;  
+}
+
+nav {
+    z-index: 1;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu {
+    backdrop-filter: blur(10px);
+}
+
+
+    
