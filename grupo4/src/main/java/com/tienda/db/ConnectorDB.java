@@ -38,7 +38,8 @@ public class ConnectorDB {
         return st;
     }
 
-    public Statement conectarDB(){
+
+        public Statement conectarDB(){
         // Conexión a la base de datos
         try {
             
@@ -56,6 +57,8 @@ public class ConnectorDB {
         return null;
 
     }
+         
+
 
 
 }

@@ -102,7 +102,7 @@ public class Usuario {
         this.admin = admin;
     }
 
-
+    /*
     // Metodos de la clase para los usuarios:
     // Crear cuenta
     public void crearCuenta(String nombre, String correoElectronico, String contraseña) {
@@ -142,6 +142,7 @@ public class Usuario {
         this.email = correoElectronicoActualizado;
         System.out.println("Datos personales actualizados para: " + this.nombre);
     }
+         */
 
 
 }

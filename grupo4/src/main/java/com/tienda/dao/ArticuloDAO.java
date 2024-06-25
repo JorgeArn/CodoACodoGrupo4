@@ -1,7 +1,7 @@
 package com.tienda.dao;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
+// import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.ArrayList;
@@ -18,6 +18,7 @@ public class ArticuloDAO {
 
     private Statement st;
 
+    // Constructor
     public ArticuloDAO() {
         // creo el objeto connector para luego llamar a sus metodos
         ConnectorDB connector = new ConnectorDB();
@@ -29,7 +30,7 @@ public class ArticuloDAO {
     public List<Articulo> listarArticulos() {
 
         try {
-             ResultSet rs = st.executeQuery("SELECT * FROM articulos");
+            ResultSet rs = st.executeQuery("SELECT * FROM articulos");
 
             List<Articulo> listArticulos = new ArrayList<Articulo>();
             while (rs.next()) {
@@ -53,6 +54,7 @@ public class ArticuloDAO {
 
     }
 
+    /*
     // Modificar un articulo y stock
     public void modificarArticulo(int idArticulo, String nombreActualizado, String descripcionActualizada,
             double precioActualizado) {
@@ -91,5 +93,6 @@ public class ArticuloDAO {
         // memoria
         System.out.println("Artículo eliminado: " + idArticulo);
     }
+         */
 
 }
