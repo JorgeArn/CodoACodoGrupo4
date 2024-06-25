@@ -108,6 +108,7 @@ public class Articulo {
     // Metodos de articulos
     // Metodo mostrar infomrmacion del articulo
     public void mostrarArticulo() {
+        System.out.println("------------------------------------------------------------");
         System.out.println("El id del producto es: " + articuloID);
         System.out.println("El nombre del producto es: " + nombreProducto);
         System.out.println("La categoría del producto es: " + categoria);
@@ -116,7 +117,6 @@ public class Articulo {
         System.out.println("¿Tiene descuento?: " + tieneDescuento);
         System.out.println("El descuento es de: " + descuento + "%");
         System.out.println("La URL de la foto del producto es: " + foto);
-
     }
 
     

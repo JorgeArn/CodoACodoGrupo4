@@ -5,6 +5,9 @@ import entidades.Articulo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Clase main del backend del ecomerce grupo 4
@@ -25,5 +28,26 @@ public class App {
             System.out.println(articulo.getNombreProducto());
         }
 
+        // Buscador por categoria
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese la categoria: ");
+        String teclado = scanner.nextLine().toLowerCase();// lo pongo en minuscula
+
+        List<Articulo> buscador = new ArrayList<>();
+        for (Articulo articulo : listArticulos) {
+
+            // buscador de 4 letras iniciales
+            String categoriaArticulo = articulo.getCategoria().toLowerCase();// lo pongo en minuscula
+            if (categoriaArticulo.contains(teclado.substring(0, 4))) { // Check for 4-letter substring match
+                buscador.add(articulo);
+            }
+
+            scanner.close();
+        }
+
+        // llamo al metodo mostrarArticulo con los parametros del buscador
+        for (Articulo articulo : buscador) {
+            articulo.mostrarArticulo();
+        }
     }
 }
