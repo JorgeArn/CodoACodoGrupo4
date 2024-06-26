@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import com.tienda.db.ConnectorDB;
 
-import entidades.Articulo;
+import com.tienda.model.Articulo;
 
 /**
  * Esta clase agrupa todas las consultas a la tabla articulos
@@ -36,7 +36,7 @@ public class ArticuloDAO {
             while (rs.next()) {
                 // mapeo de tablas relacionales a objetos
                 // orm = mapeo objeto-relacional
-                Articulo articulo = new Articulo(rs.getInt("articuloID"), rs.getString("nombreProducto"),
+                Articulo articulo = new Articulo(rs.getInt("id"), rs.getString("nombre"),
                         rs.getString("categoria"),
                         rs.getFloat("precio"), rs.getInt("stock"), rs.getBoolean("tieneDescuento"),
                         rs.getInt("descuento"), rs.getString("foto"));

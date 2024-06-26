@@ -1,13 +1,11 @@
 package com.tienda;
 
 import com.tienda.dao.ArticuloDAO;
-import entidades.Articulo;
+import com.tienda.model.Articulo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Clase main del backend del ecomerce grupo 4
@@ -18,17 +16,17 @@ import java.util.regex.Pattern;
 public class App {
     public static void main(String[] args) {
 
-        ArticuloDAO articuloDAO = new ArticuloDAO();
+         ArticuloDAO articuloDAO = new ArticuloDAO();
         // guarda en listArticulos una lista con los objetos de la tabla articulos,
         // obtenidos en el mapeo hecho en ArticuloDAO
-        List<Articulo> listArticulos = articuloDAO.listarArticulos();
-
+        List<Articulo> listArticulos = articuloDAO.listarArticulos(); 
+ 
         // recorre la listArticulos con el for y los muestra
         for (Articulo articulo : listArticulos) {
-            System.out.println(articulo.getNombreProducto());
+            System.out.println(articulo.toString());
         }
 
-        // Buscador por categoria
+       /*  // Buscador por categoria
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese la categoria: ");
         String teclado = scanner.nextLine().toLowerCase();// lo pongo en minuscula
@@ -48,6 +46,6 @@ public class App {
         // llamo al metodo mostrarArticulo con los parametros del buscador
         for (Articulo articulo : buscador) {
             articulo.mostrarArticulo();
-        }
-    }
+        }*/
+    } 
 }
