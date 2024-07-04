@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Indumentaria</title>
+    <link rel="icon" href="static/img/logo.png">
+
+    <!-- css index -->
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <!-- css Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts Iconos -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- Buscador -->
+    <form id="formulario" class="search">
+        <input type="text" id="inputBusqueda" name="busqueda" class="input-search  me-3" placeholder="Buscar...">
+        <button class="btnbuscador" type="submit">Buscar</button>
+    </form>
+
+    <!-- header menú -->
+    <header>
+        <nav class="container-fluid navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container-fluid menu">
+                <button class="navbar-toggler m-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-4" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./templates/articulosIndex.html?categoria=abrigos">Abrigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="templates/articulosIndex.html?categoria=accesorios">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="templates/articulosIndex.html?categoria=calzado">Calzado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="templates/articulosIndex.html?categoria=pantalones">Pantalones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="templates/articulosIndex.html?categoria=remeras">Remeras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="templates/articulosIndex.html?categoria=vestidos">Vestidos</a>
+                        </li>
+                    </ul>
+                    <hr class="text-white-50">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" type="button" data-bs-toggle="modal"
+                                data-bs-target="#registro">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" type="button" data-bs-toggle="modal"
+                                data-bs-target="#ingresar">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal Registro -->
+    <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="formRegister" method="GET" novalidate>
+                        <div class="form-control">
+                            <label>Nombre</label>
+                            <input type="text" required name="firstname" id="firstname">
+                        </div>
+                        <div class="error" id="error-firstname"></div>
+                        <div class="form-control">
+                            <label>Apellido</label>
+                            <input type="text" required name="lastname" id="lastname">
+                        </div>
+                        <div class="error" id="error-lastname"></div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" required name="email" id="email">
+                        </div>
+                        <div class="error" id="error-email"></div>
+                        <div class="form-control">
+                            <label>Contraseña</label>
+                            <input type="password" required name="password" id="register-pass"
+                                oninput="calcFort('register-pass', 'fort-register')">
+
+                        </div>
+                        <div class="error" id="error-password"></div>
+                        <div class="form-control">
+                            <label id="label-birthdate">Fecha de Nacimiento</label>
+                            <input type="date" required name="birthdate" id="birthdate">
+                        </div>
+                        <div class="form-control">
+                            <select name="country" id="country" class="form-select">
+                                <option value="">País</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Perú</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                        <div class="form-terms">
+                            <div class="terms">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Acepto términos y condiciones</label>
+                            </div>
+                        </div>
+
+                        <div class="bg-danger text-center fs-6 p-1 mb-3">
+                            Fortaleza <span id="fort-register" class="p-2"></span>
+                        </div>
+                        <button type="button" onclick="verPass('register-pass')">Ver</button>
+                        <button type="submit"
+                            onclick="alert('Opción no disponible, estamos trabajando en ello.')">Registrarse</button>
+                        <div class="form-help">
+                            <a href="#">¿Necesitas ayuda?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--inicio sesion-->
+    <div class="modal fade" id="ingresar" tabindex="-1" aria-labelledby="inicioSesionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="inicioSesionLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text text-muted"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-pass" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="login-pass" disabled>
+
+                        </div>
+                        <div class="mb-3 form-check">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                        </div>
+                        <button type="button" onclick="verPass('login-pass')">Ver contraseña</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carrousel -->
+    <section class="sectionABorrar">
+        <div>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="">
+                            <img src="https://img.freepik.com/foto-gratis/concepto-belleza-moda-disparo-longitud-completa-hermosa-mujer-morena-vestido-negro-lujo-tacones-fiesta-sonriendo-labios-rojos-pie-sobre-fondo-blanco_1258-41110.jpg?"
+                                class="d-block w-100" alt="Imagen de dos chicas con vestidos">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en vestidos</h1>
+                                <h2 class="subtitle-banner">Vestidos Maggie</h2>
+                                <h3 class="subtitle-banner">40% OFF</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHiArbXlqmvV2nBk8LKUD8VixYfceJVLK5UA&s"
+                                class="d-block w-100" alt="campera de moda">
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en camperas</h1>
+                                <h2 class="subtitle-banner">Campera Charlie</h2>
+                                <h3 class="subtitle-banner">40% OFF</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvBtSuQZqOx6VRqHTtiT6H4nltG4TThHHdw&s"
+                                class="d-block w-100" alt="pantalon de moda">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en pantalones</h1>
+                                <h2 class="subtitle-banner">Pantalon Nina</h2>
+                                <h3 class="subtitle-banner">20% OFF</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvx9qDAcxQyp2OYDEJxbnxvR1h8pKOm1WNGQ&s"
+                                class="d-block w-100" alt="pantalon de moda">
+
+                            <div class="carousel-caption  d-md-block">
+                                <h1 class="title-banner">Descuentos en calzado</h1>
+                                <h2 class="subtitle-banner">Calzado Martin</h2>
+                                <h3 class="subtitle-banner">10% OFF</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIx3mxr16ycW_WRJMcz-R22OuqaTSmnwxjGA&s"
+                                class="d-block w-100" alt="pantalon de moda">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="title-banner">Descuentos en remeras</h1>
+                            <h2 class="subtitle-banner">Remera Lola</h2>
+                            <h3 class="subtitle-banner">35% OFF</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLlJtZraBdNn4gpH6qO58QXe1GyTyubEzRA&s"
+                                class="d-block w-100" alt="pantalon de moda">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="title-banner">Descuentos en accesiorios</h1>
+                            <h2 class="subtitle-banner">Gorro Moe</h2>
+                            <h3 class="subtitle-banner">35% OFF</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Productos mas vendidos PROXIMAMENTE...-->
+    <!-- <section class="mas-vendidos text-center pt-5 sectionABorrar">
+        <h1>Productos más vendidos</h1>
+    </section> -->
+
+    <!-- Formulario Contacto -->
+    <section class="container-form text-center mt-5 mb-5 ms-1 me-1 sectionABorrar">
+        <div class="container-fluid d-flex justify-content-center align-items-center" id="contacto">
+            <form class="form-contacto">
+                <h2>Contacto</h2>
+                <div class="mb-3 text-start">
+                    <label for="exampleInputEmail1" class="form-label">Tu email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Tu email">
+                    <div id="emailHelp" class="form-text"></div>
+                    <label for="exampleInputPassword1" class="form-label">Tu
+                        mensaje</label>
+                    <textarea class="form-control" id="exampleInputPassword1" rows="5"
+                        placeholder="Dejanos tu mensaje"></textarea>
+                </div>
+                <button type="submit"
+                    onclick="alert('Opción no disponible, estamos trabajando en ello.')">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cards desde la API que carga el buscador-->
+    <section>
+        <div class="cards"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid" id="footer">
+        <div>
+            <a href="templates/extras/terminosyCondiciones.html">Términos y condiciones</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Preguntas
+                Frecuentes</a>
+            <a href="#" onclick="alert('Opción no disponible, estamos trabajando en ello.')">Ayuda</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="static/img/facebook.jpg" alt="Facebook" width="32" height="32">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="static/img/tamaño-imagen-twitter-redes-sociales.jpg" alt="Twitter" width="32" height="32">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="static/img/instagram.jpg" alt="Instagram" width="32" height="32">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" aria-label="Instagram">
+                <img src="static/img/whatsapp2.png" alt="Instagram" width="32" height="32">
+            </a>
+        </div>
+    </footer>
+
+    <!-- script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Inicio de sesion -->
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/fortaleza.js"></script>
+
+    <!-- JS Fetch Buscador-->
+    <script src="static/js/busquedaFetch.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Grupo4Application<grupo4>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.codo.grupo4.Grupo4Application",
+            "projectName": "grupo4",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
