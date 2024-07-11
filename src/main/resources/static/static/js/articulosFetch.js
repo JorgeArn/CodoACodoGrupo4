@@ -6,9 +6,8 @@ const categoria = urlParams.get('categoria');
 document.querySelector('.cards').innerHTML = `
 <h1 class="text-center fs-1 fw-bold text-white bg-dark rounded-pill">CARGANDO...</h1>`;
 
-// Llamada a la api                                                        acá toma el valor que tiene "categoria" en la url del nav
-const respuesta = fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${categoria}&limit=3#json`);
-
+// Llamada a la api                                           acá toma el valor que tiene "categoria" en la url
+const respuesta = fetch(`http://localhost:8080/buscarPorCat/${categoria}`)
 respuesta
     .then(res => res.json())
     .then(response => renderArticulos(response))
@@ -17,18 +16,18 @@ respuesta
 
 // Función que crea la card de articulos
 function renderArticulos(response) {
-    const articulos = response.results;
+    const articulos = response;
     let card = '';
     for (let articulo of articulos) {
         card += `
         <div class="card">
-            <img src="${articulo.thumbnail}"
+            <img src="${articulo.foto}"
                 class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${articulo.title}</h5>
+                <h5 class="card-title">${articulo.nombre}</h5>
                 <p class="card-text">
                 </p>
-                <a href="articuloInfo.html?id=${articulo.id}" class="btn btn-primary" >Ver mas</a>
+                <a href="articuloInfo.html?id=${articulo.id}" class="btn btn-primary" onclick="obtenerID()">Ver mas</a>
             </div>
         </div>
         `
@@ -38,3 +37,4 @@ function renderArticulos(response) {
     document.querySelector('.cards').innerHTML = card;
 
 }
+
